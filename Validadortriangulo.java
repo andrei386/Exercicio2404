@@ -23,8 +23,15 @@ public class Validadortriangulo{
         if((a < (b+c))&&(b < (a+c))&&(c < (a+b))){
             //É triângulo
             System.out.printf("Sd, %d e Sd formas triângulo!\n", a, b, c);
-        
-        } else{
+
+            if((a == b) && (b == c)){
+                System.out.println("Triângulo Isoceles!");
+            } else if(( a == b) || (b == c) || (a == c)){
+                System.out.println("Triângulo Equilateo!");
+            } else {
+                System.out.println("Triângulo Escaleno!");
+            }
+        } else {
             //Não é triângulo
             System.out.printf("\n%d, %d e %d NÃO formam triângulo!\n", a, b, c);
         }
